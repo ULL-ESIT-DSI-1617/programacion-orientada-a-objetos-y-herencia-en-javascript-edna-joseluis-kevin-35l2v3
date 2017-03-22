@@ -19,16 +19,32 @@ class Fahrenheit extends Temperatura{
     constructor(valor, tipo){
         super(valor, tipo)
     }
-    
+
     toCelsius(){
         let resultado = (this.valor_-32)/1.8;
         return resultado;
     }
-    
+
     toKelvin(){
         let resultado = this.toCelsius()+273;
         return resultado;
     }
+}
+
+class Celsius extends Temperatura{
+  constructor(valor, tipo){
+      super(valor, tipo)
+  }
+
+  toKelvin(){
+    let resultado = this.valor_+273;
+    return resultado;
+  }
+
+  toFanrenheit(){
+    let resultado = (this.valor_*1.8)+32;
+    return resultado:
+  }
 }
 
 function calculate() {
