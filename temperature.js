@@ -43,7 +43,7 @@ class Celsius extends Temperatura{
 
   toFahrenheit(){
     let resultado = (this.valor_*1.8)+32;
-    return resultado:
+    return resultado;
   }
 }
 
@@ -51,12 +51,12 @@ class Kelvin extends Temperatura {
 	constructor(valor, tipo) {
 		super(valor, tipo);
 	}
-	
+
 	toCelsius() {
 		let resultado = this.valor_ - 273;
 		return resultado;
 	}
-	
+
 	toFahrenheit() {
 		let resultado = (this.toCelsius * 1.8) + 32;
 		return resultado;
