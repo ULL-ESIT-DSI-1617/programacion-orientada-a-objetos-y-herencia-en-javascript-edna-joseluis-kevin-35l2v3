@@ -1,4 +1,14 @@
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
+
+class Medida {
+	constructor(valor, medida) {
+		this.valor_ = valor;
+		this.medida_ = medida;
+	}
+}
+
+
+
 function calculate() {
   var result;
   var temp = original.value;
