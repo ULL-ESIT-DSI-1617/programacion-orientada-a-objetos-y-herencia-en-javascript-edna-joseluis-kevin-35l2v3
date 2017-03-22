@@ -73,11 +73,22 @@ class Metros extends Longitud {
 	constructor(valor, tipo) {
 		super(valor, tipo);
 	}
-	
+
 	toPulgadas() {
 		let resultado = this.valor_ * 39.37;
 		return resultado;
 	}
+}
+
+class Pulgadas extends Longitud(){
+		constructor(valor,tipo){
+			super(valor,tipo);
+		}
+
+		toMetros(){
+			let resultado = this.valor_ / 39.37;
+			return resultado;
+		}
 }
 
 function calculate() {
