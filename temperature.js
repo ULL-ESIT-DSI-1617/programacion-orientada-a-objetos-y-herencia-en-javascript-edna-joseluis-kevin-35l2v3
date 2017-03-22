@@ -43,7 +43,8 @@ class Celsius extends Temperatura{
   }
 
   toKelvin(){
-    let resultado = this.valor_+273;
+    let resultado = this.valor_;
+    resultado += 273;
     return resultado;
   }
 
@@ -80,28 +81,154 @@ class Metros extends Longitud {
 	}
 }
 
+class Pulgadas extends Longitud {
+	constructor(valor, tipo) {
+		super(valor, tipo);
+	}
+	
+	toMetros() {
+		let resultado = this.valor_/39.37;
+		return resultado;
+	}
+}
+
 function calculate() {
   var result;
   var temp = original.value;
-  var regexp = /([-+]?\d+(?:\.\d*)?)\s*([fFcC])/;
+  var regexp = /([-+]?\d+(?:\.\d*)?)\s*([fFcCkKmMiI])\s+(?:to\s+)?([fFcCkKmMiI])/;
 
   var m = temp.match(regexp);
 
   if (m) {
     var num = m[1];
-    var type = m[2];
-    num = parseFloat(num);
-    if (type == 'c' || type == 'C') {
-      result = (num * 9/5)+32;
-      result = result.toFixed(1)+" Fahrenheit"
-    }
-    else {
-      result = (num - 32)*5/9;
-      result = result.toFixed(1)+" Celsius"
-    }
+    var type1 = m[2];
+	var type2 = m[3];
+	
+	switch (type1) {
+		case 'f':
+		case 'F':{
+			let aux = new Fahrenheit(num, type1);
+			switch (type2) {
+				case 'c':
+				case 'C':{
+					result = aux.toCelsius();
+					result = result.toFixed(1)+" Celsius";
+					break;
+                }
+				case 'k':
+				case 'K':{
+					result = aux.toKelvin();
+					result = result.toFixed(1)+" Kelvin";
+					break;
+                }
+				case 'f':
+				case 'F':{
+					result = num.toFixed(1)+" Metros";
+                    break;
+                }
+				default:
+                    result = "Medida de conversión incorrecta!";
+			}
+			break;
+		}
+		case 'c':
+		case 'C':{
+			let aux = new Celsius(num, type1);
+			switch (type2) {
+				case 'f':
+				case 'F':{
+					result = aux.toFahrenheit();
+					result = result.toFixed(1)+" Fahrenheit";
+					break;
+                }
+				case 'k':
+				case 'K':{
+					result = aux.toKelvin();
+                    console.log(result);
+					result = result.toFixed(1)+" Kelvin";
+					break;
+                }
+				case 'c':
+				case 'C':{
+					result = num.toFixed(1)+" Celsius";
+					break;
+                }
+				default:
+                    result = "Medida de conversión incorrecta!";
+			}
+			break;
+		}
+		case 'k':
+		case 'K':{
+			let aux = new Kelvin(num, type1);
+			switch (type2) {
+				case 'c':
+				case 'C':{
+					result = aux.toCelsius();
+					result = result.toFixed(1)+" Celsius";
+					break;
+                }
+				case 'f':
+				case 'F':{
+					result = aux.toFahrenheit();
+					result = result.toFixed(1)+" Fahrenheit";
+					break;
+                }
+				case 'k':
+				case 'K':{
+					result = num.toFixed(1)+" Kelvin";
+                    break;
+                }
+				default:
+                    result = "Medida de conversión incorrecta!";
+			}
+			break;
+		}
+		case 'm':
+		case 'M':{
+			let aux = new Metros(num, type1);
+			switch (type2) {
+				case 'i':
+				case 'I':{
+					result = aux.toPulgadas();
+					result = result.toFixed(1)+" Pulgadas";
+					break;
+                }
+				case 'm':
+				case 'M':{
+					result = num.toFixed(1)+" Metros";
+                    break;
+                }
+				default:
+                    result = "Medida de conversión incorrecta!";
+			}
+			break;
+		}
+		case 'i':
+		case 'I':{
+			let aux = new Pulgadas(num, type1);
+			switch (type2) {
+				case 'm':
+				case 'M':{
+					result = aux.toMetros();
+					result = result.toFixed(1)+" Metros";
+					break;
+                }
+				case 'i':
+				case 'I':{
+					result = num.toFixed(1)+" Pulgadas";
+                    break;
+                }
+				default:
+                    result = "Medida de conversión incorrecta!";
+			}
+			break;
+		}
+		default:
+	}
     converted.innerHTML = result;
   }
   else {
-    converted.innerHTML = "ERROR! Try something like '-4.2C' instead";
+    converted.innerHTML = "ERROR! Try something like '-4.2C to K' instead";
   }
 }
