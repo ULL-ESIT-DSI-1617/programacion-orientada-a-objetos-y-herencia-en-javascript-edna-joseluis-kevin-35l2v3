@@ -15,6 +15,22 @@ class Temperatura extends Medida{
 
 }
 
+class Fahrenheit extends Temperatura{
+    constructor(valor, tipo){
+        super(valor, tipo)
+    }
+    
+    toCelsius(){
+        let resultado = (this.valor_-32)/1.8;
+        return resultado;
+    }
+    
+    toKelvin(){
+        let resultado = this.toCelsius()+273;
+        return resultado;
+    }
+}
+
 function calculate() {
   var result;
   var temp = original.value;
@@ -28,7 +44,7 @@ function calculate() {
     num = parseFloat(num);
     if (type == 'c' || type == 'C') {
       result = (num * 9/5)+32;
-      result = result.toFixed(1)+" Farenheit"
+      result = result.toFixed(1)+" Fahrenheit"
     }
     else {
       result = (num - 32)*5/9;
