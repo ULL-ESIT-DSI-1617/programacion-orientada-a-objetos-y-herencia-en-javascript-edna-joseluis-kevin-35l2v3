@@ -1,54 +1,61 @@
-# Práctica 5: Sessions y Autenticación en ExpressJS
+# Práctica 6: Programación Orientada a Objetos y Herencia en JavaScript
 
 
 ## Requisitos
 
-* Cree un servidos que use para proveer autenticación a los HTML generados a partir de un libro de prueba.
+* Modifique el conversor de Temperaturas para que use objetos y herencia.
 
-* Encripte los passwords en un fichero *users.json* (puede usar *bcrypt-nodejs*) en el que se guardan las parejas *usuario: password*.
+* Defina una clase *Medida* cuyos objetos tienen un *valor* numérico (p. ej. *4.5e2*) y un tipo dado por una cadena (p. ej "*Km*" por Kilómetros o "*m3*" por metros cúbicos o "*F*" por grados Fahrenheit).
 
-* Puede escribir un programa auxiliar que le genere el fichero de claves *users.json*.
+* Las clase *Temperatura* hereda de *Medida*.
 
-* Use un formulario *form* para obtener el usuario y la clave.
+* Las clases *Celsius*, *Fahrenheit*, *Kelvin*, etc. heredan de *Temperatura*.
 
-* Use vistas en *ejs* o *pug* para el programa.
+* En la entrada se deberán admitir grados *Kelvin* además de los de la práctica anterior.
 
-* Deberá tener rutas y vistas para *logout* y para cambiar el password.
+* En la entrada se podrán escribir entradas como *32C to K* para convertir de Celsius a Kelvin o bien *-1.43e2f to C* para convertir de Fahrenheit a Celsius.
 
-* Despliegue la aplicación en Heroku y en la máquina virtual del IaaS.
+* La palabra toes opcional pudiendo omitirse. Así se aceptarán entradas como *32C K* o bien *-1.43e2f C*
+
+* Sólo se muestra como resultado el solicitado. Si no se especifica el resultado se deberá emitir un mensaje de error
+
+* Use expresiones regulares extendidas
+
+* Procure que el código quede bien encapsulado
+
+* Reescriba el código para que use las clases.
+
+* Opcionalmente, si se desea se puede hacer que permita otras conversiones (por ejemplo, metros a pulgadas)
+
+* En esta tarea no se pide que use pruebas, ni cubrimiento, ni Karma ni Travis.
+
+* Elabore sus apuntes del curso con lo aprendido de OOP. Despliéguelo en Heroku. Los apuntes deberán estar protegidos con usuario dsi1617 y clave dsi1617password
+
+
 
 ## Recursos
 
-* [Repositorio con ejemplos de uso de cookies en express](https://github.com/ULL-ESIT-DSI-1617/express-cookies-examples)
-* El ejemplo [staticauth.js](https://github.com/ULL-ESIT-DSI-1617/express-cookies-examples/blob/master/staticauth.js) es similar a lo que se pide.
-    * En este ejemplo el [directorio gbookexample](https://github.com/ULL-ESIT-DSI-1617/express-cookies-examples/tree/master/gbookexample) contiene los markdown fuente para el libro.
-    * El libro es compilado con: *gitbook build gbookexample/ public/*.
-    * De manera que los HTML se montan en la ruta *content* y se sirven desde el direcorio *public*.
-* Tiene un ejemplo de formulario en la vista *[login.ejs](https://github.com/ULL-ESIT-DSI-1617/express-cookies-examples/blob/master/views/login.ejs)* que es usada por el ejemplo *[auth-example.js](https://github.com/ULL-ESIT-DSI-1617/express-cookies-examples/blob/master/auth-example.js#L99-L101)*.
-* [Descripción de la Práctica: Evaluar Manejo de Rutas en ExpressJS](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicalearningcookies.html).
-* [Apuntes sobre Cookies y Sessions](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/cookies/).
+* [Apuntes: OOP en JavaScript](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/oop/).
+* [Apuntes del Conversor de Temperaturas (http://crguezl.github.io/pl-html)](http://crguezl.github.io/pl-html/node9.html).
+* [Conversor de Temperaturas: Repo en GitHub](https://github.com/crguezl/ull-etsii-grado-pl-1213-temperature-converter).
+* [Conversor de Temperatura: despliegue en gh-pages](http://crguezl.github.io/ull-etsii-grado-pl-1213-temperature-converter/).
+
 
 ## Aplicación
 
-[Despliegue en Heroku](https://sessions-auten-expressjs.herokuapp.com/) - Edna Liliana Galiano Camacho
+[Despliegue en Heroku]() - Edna Liliana Galiano Camacho
 
-[Despliegue en Heroku](https://sessionyautenticacion.herokuapp.com/) - José Luis Doblado González
+[Despliegue en Heroku](/) - José Luis Doblado González
 
-[Despliegue en Heroku](https://sessions-autenticacion-express.herokuapp.com/) - Kevin Estévez Expósito
+[Despliegue en Heroku]() - Kevin Estévez Expósito
 
 [Despliegue en Iaas]() - Edna Liliana Galiano Camacho
 
-[Despliegue en Iaas](http://10.6.128.96:8086/) - Kevin Estévez Expósito
+[Despliegue en Iaas]() - Kevin Estévez Expósito
 
 ## A tener en cuenta
 
-El fichero de claves contiene tres pares *usuario: clave* por defecto que, desde la aplicación, no podrán ser eliminados ni tampoco podrán modificar sus contraseñas. De esta forma se garantiza que siempre habrá alguna cuenta con la que iniciar sesión. Estos 3 pares se guardan en el fichero de claves con la contraseña encriptada, nunca se guardarán contraseñas sin encriptar, y son los siguientes:
-
-   * edna: ednapassword
-   * joseluis: joseluispassword
-   * kevin: kevinpassword
-
-El resto de usuarios que se registren podrán ser eliminados y podrán también cambiar sus contraseñas.
+Los apuntes estarán protegidos con usuario *dsi1617* y clave *dsi1617password*
 
 ## Asignatura DSI ULL
 
@@ -56,7 +63,7 @@ El resto de usuarios que se registren podrán ser eliminados y podrán también 
 
 ## Enlace descripción Práctica
 
-[Práctica 5](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicasessions.html)
+[Práctica 6](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaoop.html)
 
 ## Autores
 
