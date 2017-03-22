@@ -32,7 +32,7 @@ class Fahrenheit extends Temperatura{
     }
 
     toKelvin(){
-        let resultado = this.toCelsius()+273;
+        let resultado = this.toCelsius() +273;
         return resultado;
     }
 }
@@ -43,8 +43,7 @@ class Celsius extends Temperatura{
   }
 
   toKelvin(){
-    let resultado = this.valor_;
-    resultado += 273;
+    let resultado = parseFloat(this.valor_) + 273;
     return resultado;
   }
 
@@ -81,16 +80,7 @@ class Metros extends Longitud {
 	}
 }
 
-class Pulgadas extends Longitud {
-	constructor(valor, tipo) {
-		super(valor, tipo);
-	}
-	
-	toMetros() {
-		let resultado = this.valor_/39.37;
-		return resultado;
-	}
-class Pulgadas extends Longitud(){
+class Pulgadas extends Longitud{
 		constructor(valor,tipo){
 			super(valor,tipo);
 		}
@@ -109,10 +99,10 @@ function calculate() {
   var m = temp.match(regexp);
 
   if (m) {
-    var num = m[1];
+    var num = parseFloat(m[1]);
     var type1 = m[2];
 	var type2 = m[3];
-	
+
 	switch (type1) {
 		case 'f':
 		case 'F':{
