@@ -69,6 +69,17 @@ class Kelvin extends Temperatura {
 	}
 }
 
+class Metros extends Longitud {
+	constructor(valor, tipo) {
+		super(valor, tipo);
+	}
+	
+	toPulgadas() {
+		let resultado = this.valor_ * 39.37;
+		return resultado;
+	}
+}
+
 function calculate() {
   var result;
   var temp = original.value;
