@@ -92,141 +92,125 @@ class Pulgadas extends Longitud {
 }
 
 function calculate() {
-    var result;
-    var valor = original.value;
-    var regexp = /([-+]?\d+(?:\.\d*)?)\s*([fFcCkKmMiI])\s+(?:to\s+)?([fFcCkKmMiI])/;
+    let result;
+    let aux;
+    let error = "ERROR! Try something like '-4.2C to K' instead";
+    let valor = original.value;
+    let regexp = /^\s*([-+]?\d+(?:\.\d*)?)\s*([fFcCkKmMiI])\s+(?:to\s+)?([fFcCkKmMiI])\s*$/;
 
-    var m = valor.match(regexp);
+    let m = valor.match(regexp);
 
     if (m) {
-        var num = parseFloat(m[1]);
-        var type1 = m[2];
-        var type2 = m[3];
+        let num = parseFloat(m[1]);
+        let type1 = m[2];
+        let type2 = m[3];
 
         switch (type1) {
             case 'f':
-            case 'F': {
-                let aux = new Fahrenheit(num, type1);
+            case 'F':
+                aux = new Fahrenheit(num, type1);
                 switch (type2) {
                     case 'c':
-				    case 'C':{
+				    case 'C':
                         result = aux.toCelsius();
                         result = result.toFixed(1) + " Celsius";
                         break;
-                    }
 				    case 'k':
-				    case 'K': {
+				    case 'K':
                         result = aux.toKelvin();
                         result = result.toFixed(1) + " Kelvin";
                         break;
-                    }
 				    case 'f':
-				    case 'F': {
+				    case 'F':
                         result = num.toFixed(1) + " Fahrenheit";
-                        break;
-                    }
+                        break
 				    default:
-                        result = "Incorrect conversion measure!";
+                        result = error;
                 }
                 break;
-            }
             case 'c':
-            case 'C': {
-                let aux = new Celsius(num, type1);
+            case 'C':
+                aux = new Celsius(num, type1);
                 switch (type2) {
                     case 'f':
-				    case 'F': {
+				    case 'F':
                         result = aux.toFahrenheit();
                         result = result.toFixed(1) + " Fahrenheit";
                         break;
-                    }
 				    case 'k':
-				    case 'K': {
+				    case 'K':
                         result = aux.toKelvin();
                         result = result.toFixed(1) + " Kelvin";
                         break;
-                    }
 				    case 'c':
-				    case 'C': {
+				    case 'C':
                         result = num.toFixed(1) + " Celsius";
                         break;
-                    }
 				    default:
-                        result = "Incorrect conversion measure!";
+                        result = error;
                 }
                 break;
-            }
             case 'k':
-            case 'K': {
-                let aux = new Kelvin(num, type1);
+            case 'K':
+                aux = new Kelvin(num, type1);
                 switch (type2) {
                     case 'c':
-				    case 'C': {
+				    case 'C':
                         result = aux.toCelsius();
                         result = result.toFixed(1) + " Celsius";
                         break;
-                    }
 				    case 'f':
-				    case 'F': {
+				    case 'F':
                         result = aux.toFahrenheit();
                         result = result.toFixed(1) + " Fahrenheit";
                         break;
-                    }
 				    case 'k':
-				    case 'K': {
+				    case 'K':
                         result = num.toFixed(1) + " Kelvin";
                         break;
-                    }
 				    default:
-                        result = "Incorrect conversion measure!";
+                        result = error;
                 }
                 break;
-            }
             case 'm':
-            case 'M': {
-                let aux = new Metros(num, type1);
+            case 'M':
+                aux = new Metros(num, type1);
                 switch (type2) {
                     case 'i':
-                    case 'I': {
+                    case 'I':
                         result = aux.toPulgadas();
                         result = result.toFixed(1) + " Inches";
                         break;
-                    }
 				    case 'm':
-				    case 'M': {
+				    case 'M':
                         result = num.toFixed(1) + " Meters";
                         break;
-                    }
 				    default:
-                        result = "Incorrect conversion measure!";
+                        result = error;
                 }
                 break;
-            }
             case 'i':
-            case 'I': {
-                let aux = new Pulgadas(num, type1);
+            case 'I':
+                aux = new Pulgadas(num, type1);
                 switch (type2) {
                     case 'm':
-				    case 'M': {
+				    case 'M':
                         result = aux.toMetros();
                         result = result.toFixed(1) + " Inches";
                         break;
-                    }
 				    case 'i':
-				    case 'I': {
+				    case 'I':
                         result = num.toFixed(1) + " Meters";
                         break;
-                    }
 				    default:
-                        result = "Incorrect conversion measure!";
+                        result = error;
                 }
                 break;
-            }
             default:
         }
         converted.innerHTML = result;
     }
     else {
-        converted.innerHTML = "ERROR! Try something like '-4.2C to K' instead";
+        converted.innerHTML = error;
     }
 }
