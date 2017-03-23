@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+  },
+  "name": "temperature",
+  "description": "ETSII ULL Grado de Informatica",
+  "version": "1.0.0",
+  "main": "temperature.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-DSI-1617/programacion-orientada-a-objetos-y-herencia-en-javascript-edna-joseluis-kevin-35l2v3.git"
+  },
+  "author": "Edna Liliana Galiano Camacho - José Luis Doblado González - Kevin Estévez Expósito",
+  "license": "ISC",
+  "homepage": "https://github.com/ULL-ESIT-DSI-1617/programacion-orientada-a-objetos-y-herencia-en-javascript-edna-joseluis-kevin-35l2v3#readme"
+}
