@@ -43,6 +43,8 @@
 
 ## Aplicación
 
+[Despliegue en gh-pages](https://ull-esit-dsi-1617.github.io/programacion-orientada-a-objetos-y-herencia-en-javascript-edna-joseluis-kevin-35l2v3/)
+
 [Despliegue en Heroku]() - Edna Liliana Galiano Camacho
 
 [Despliegue en Heroku](/) - José Luis Doblado González
