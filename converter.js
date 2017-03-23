@@ -96,7 +96,7 @@ function calculate() {
     let aux;
     let error = "ERROR! Try something like '-4.2C to K' instead";
     let valor = original.value;
-    let regexp = /^\s*([-+]?\d+(?:\.\d*)?)\s*([fFcCkKmMiI])\s+(?:to\s+)?([fFcCkKmMiI])\s*$/;
+    let regexp = /^\s*([-+]?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*([fFcCkKmMiI])\s+(?:to\s+)?([fFcCkKmMiI])\s*$/;
 
     let m = valor.match(regexp);
 
