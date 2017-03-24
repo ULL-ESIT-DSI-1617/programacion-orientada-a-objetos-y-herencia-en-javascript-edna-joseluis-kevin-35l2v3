@@ -51,11 +51,11 @@
 
 [Despliegue en Heroku]() - José Luis Doblado González
 
-[Despliegue en Heroku]() - Kevin Estévez Expósito
+[Despliegue en Heroku](https://oop-javascript.herokuapp.com/) - Kevin Estévez Expósito
 
 [Despliegue en Iaas]() - Edna Liliana Galiano Camacho
 
-[Despliegue en Iaas]() - Kevin Estévez Expósito
+[Despliegue en Iaas](http://10.6.128.96:8087/) - Kevin Estévez Expósito
 
 ## A tener en cuenta
 
