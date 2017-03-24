@@ -59,3 +59,7 @@
 * [Prototipado y Herencia en JavaScript](CAPITULO10/CAPITULO10.md)
     * [Creación de clases](CAPITULO10/CAPITULO10.md#creación-de-clases)
     * [Herencia](CAPITULO10/CAPITULO10.md#herencia)
+
+* [ECMAScript 6 (Clases y Herencia)](CAPITULO11/CAPITULO11.md)
+    * [Creación de clases](CAPITULO11/CAPITULO11.md#creación-de-clases)
+    * [Herencia](CAPITULO11/CAPITULO11.md#herencia)

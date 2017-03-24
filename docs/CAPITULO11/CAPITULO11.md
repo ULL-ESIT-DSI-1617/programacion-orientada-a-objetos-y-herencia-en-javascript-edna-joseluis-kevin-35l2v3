@@ -3,7 +3,7 @@
 Las clases de javascript son introducidas en el ECMAScript 6 y son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases **no** introduce un nuevo modelo de herencia orientada a objetos a JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia.
 
 
-## Clases
+## Creación de clases
 
 Una manera de definir una clase es mediante una *declaración de clase*. Para la declaración de una clase, es necesario el uso de la palabra reservada *class* y un nombre para la clase ("Poligono" en esté caso).
 
@@ -88,7 +88,9 @@ La palabra clave *stati*c define un método estático para una clase. Los métod
 ~~~
 
 
-## Herencia (subclases con *extends*)
+## Herencia
+
+### Subclases con *extends*
 
 La palabra clave *extends* es usada en *declaraciones de clase* o *expresiones de clase* para crear una clase hija.
 
