@@ -1,40 +1,40 @@
 # Contenido del Libro: 
 
 
-### Como Enviar las Tareas
+## Como Enviar las Tareas
 
 - Lea las Instrucciones para los envíos de tareas en esta asignatura
 
-### NodeJS
+## NodeJS
 
 - Instala node.JS
     - Comprueba que npm funciona
 
-#### Campus Virtual
+## Campus Virtual
 
 - Pon tu foto en tu perfil del campus virtual
 
-### Git
+## Git
 
 - Instala Git.
 - Git for Windows
 
-### GitHub
+## GitHub
 
 - Abre una cuenta en GitHub si no la tienes
 - Si dispones de un Mac o Windows instala GitHub DeskTop
 - Lee el capítulo de GitHub y aprende a usar las gh-pages, los issues, los proyectos ...
 - Instala hub
 
-### Editores
+## Editores
 
 - Instala Atom, el editor desarrollado por GitHub
 
-### c9
+## c9
 
 - Abre una cuenta en c9.io (cloud9). Vincula tu cuenta de GitHub con c9.
 
-### MarkDown y GitBook
+## MarkDown y GitBook
 
 - Aprenda a utilizar MarkDown y GitBook escribiendo la documentación en formato MarkDown de como ha realizado esta primera práctica, incluyendo secciones:
     - describiendo que es GitBook y como se utiliza,
@@ -43,15 +43,40 @@
     - como se despliega un libro en www.gitbook.com,
     - Instale GitBook Desktop
 
-### Pandoc
+## Pandoc
 
 - Un buen traductor de Markdown a HTML es pandoc. Instala pandoc y aprende a usarlo
 
-### Estudiar las Rutas en ExpressJS
+## Estudiar las Rutas en ExpressJS
 
 - Express es una infraestructura de aplicaciones web Node.js mínima y flexible que proporciona un conjunto sólido de características para las aplicaciones web y móviles.
 
-### Tu Página en GitHub
+## Tu Página en GitHub
 
 - Prepara tus páginas de prácticas en github.io usando un esquema parecido al de [esta alumna](https://mdbgalvan.github.io/) de manera que tengas un histórico de prácticas de la asignatura. Tu página principal enlaza a tus prácticas en las asignaturas del grado.
 
+## Administración de cookies en Express
+
+- Qué es una cookie
+- Qué es Express
+- Instalación
+- Usando Cookie-Parser
+- Sintaxis
+- Cómo establecer el tiempo de expiración de las cookies
+- Cómo eliminar cookies existentes
+
+## Autenticación y autorización mediante sesiones en Express
+
+- Instalación
+- Usando Express-Session
+- Explicación del código
+
+## Prototipado y Herencia en JavaScript
+
+- Creación de clases
+- Herencia
+
+## ECMAScript 6 (Clases y Herencia)
+
+- Creación de clases
+- Herencia
