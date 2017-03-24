@@ -7,7 +7,7 @@ Ambos procesos podrían resolverse mediante el uso de cookies, pero existiría e
 El manejo de sesiones es muy importante en cualquier aplicación, ya que sin ello no podemos rastrear la actividad del usuario.
 
 
-### Instalación
+## Instalación
 
 Como cualquier otro paquete de Node, es instalable vía ***npm***, así que lo instalaremos en el directorio ***node_modules*** de nuestra aplicación. Para ello seguimos los siguientes pasos:
 
