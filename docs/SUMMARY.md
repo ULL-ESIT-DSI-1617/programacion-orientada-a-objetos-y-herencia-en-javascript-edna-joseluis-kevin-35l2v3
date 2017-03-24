@@ -56,6 +56,6 @@
     * [Usando Express-Session](CAPITULO9/CAPITULO9.md#usando-express-session)
     * [Explicación del código](CAPITULO9/CAPITULO9.md#explicación-del-código)
 
-* [Prototipado y Herencia en JavaScript](CAPITUL10/CAPITUL10.md)
+* [Prototipado y Herencia en JavaScript](CAPITULO10/CAPITULO10.md)
     * [Creación de clases](CAPITULO10/CAPITULO10.md#creación-de-clases)
     * [Herencia](CAPITULO10/CAPITULO10.md#herencia)
