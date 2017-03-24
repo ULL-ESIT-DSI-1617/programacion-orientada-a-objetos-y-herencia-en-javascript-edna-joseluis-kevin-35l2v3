@@ -1,7 +1,7 @@
 {
   "name": "temperature",
   "version": "0.0.1",
-  "description": "Practica 4 : Estudiar Cookies y Sessions en ExpressJs",
+  "description": "Practica 6: Programación Orientada a Objetos y Herencia en JavaScript",
   "main": "converter.js",
   "scripts": {
     "generate-gitbook": "./scripts/losh generate-gitbook",

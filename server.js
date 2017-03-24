@@ -4,7 +4,6 @@ let express = require('express'),
 	session = require('express-session');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
-let bcrypt = require("bcrypt-nodejs");
 let path = require('path');
 
 let users = require("./users.json");
@@ -50,15 +49,6 @@ app.use('/login', login);
 
 let logout = require('./routes/logout');
 app.use('/logout', logout);
-
-let updatePass = require('./routes/updatePass');
-app.use('/updatePass', updatePass);
-
-let signup = require('./routes/signup');
-app.use('/signup', signup);
-
-let delAccount = require('./routes/delAccount');
-app.use('/delAccount', delAccount);
 
 app.get('/content/*?', 
 	auth  // siguiente solo si se autentica
