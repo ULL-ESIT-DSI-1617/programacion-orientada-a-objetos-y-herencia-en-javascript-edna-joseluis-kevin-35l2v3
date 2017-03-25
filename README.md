@@ -49,7 +49,7 @@
 
 [Despliegue en Heroku]() - Edna Liliana Galiano Camacho
 
-[Despliegue en Heroku]() - José Luis Doblado González
+[Despliegue en Heroku](https://herencias.herokuapp.com/) - José Luis Doblado González
 
 [Despliegue en Heroku](https://oop-javascript.herokuapp.com/) - Kevin Estévez Expósito
 
