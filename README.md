@@ -47,7 +47,7 @@
 
 ## Libro
 
-[Despliegue en Heroku]() - Edna Liliana Galiano Camacho
+[Despliegue en Heroku](https://programacion-oo-herencia-js.herokuapp.com/) - Edna Liliana Galiano Camacho
 
 [Despliegue en Heroku](https://herencias.herokuapp.com/) - José Luis Doblado González
 
