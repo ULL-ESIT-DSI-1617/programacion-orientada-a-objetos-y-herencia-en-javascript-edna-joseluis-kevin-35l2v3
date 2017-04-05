@@ -196,11 +196,11 @@ function calculate() {
                     case 'm':
 				    case 'M':
                         result = aux.toMetros();
-                        result = result.toFixed(1) + " Inches";
+                        result = result.toFixed(1) + " Meters";
                         break;
 				    case 'i':
 				    case 'I':
-                        result = num.toFixed(1) + " Meters";
+                        result = num.toFixed(1) + " Inches";
                         break;
 				    default:
                         result = error;
