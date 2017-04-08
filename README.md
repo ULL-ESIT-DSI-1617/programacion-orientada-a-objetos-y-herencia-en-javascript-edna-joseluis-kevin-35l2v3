@@ -53,7 +53,7 @@
 
 [Despliegue en Heroku](https://oop-javascript.herokuapp.com/) - Kevin Estévez Expósito
 
-[Despliegue en Iaas]() - Edna Liliana Galiano Camacho
+[Despliegue en Iaas](http://10.6.128.144:8086/) - Edna Liliana Galiano Camacho
 
 [Despliegue en Iaas](http://10.6.128.96:8087/) - Kevin Estévez Expósito
 
